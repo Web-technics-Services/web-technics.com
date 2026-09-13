@@ -134,3 +134,24 @@ if (portfolioCards.length) {
 
   applyPortfolioFilters();
 }
+
+const contactForm = document.querySelector("[data-contact-form]");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const subject = `Website enquiry from ${data.get("name") || "a prospective client"}`;
+    const body = [
+      `Name: ${data.get("name") || ""}`,
+      `Email: ${data.get("email") || ""}`,
+      `Company: ${data.get("company") || ""}`,
+      `Website: ${data.get("website") || ""}`,
+      `Budget: ${data.get("budget") || ""}`,
+      `Timeline: ${data.get("timeline") || ""}`,
+      `Services: ${data.get("services") || ""}`,
+      "",
+      String(data.get("message") || ""),
+    ].join("\n");
+    window.location.href = `mailto:info@web-technics.services?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}

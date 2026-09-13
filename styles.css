@@ -1,14 +1,14 @@
 :root {
-  --bg: #061217;
-  --bg-soft: #0b1f27;
-  --card: #0f2731;
-  --card-2: #133542;
-  --text: #e9f4f5;
-  --muted: #a9c2c7;
-  --line: #1e4657;
-  --brand: #3ed1bd;
-  --brand-2: #ffb55a;
-  --danger: #f06f62;
+  --bg: #071329;
+  --bg-soft: #0c1c3a;
+  --card: #10264b;
+  --card-2: #173463;
+  --text: #f4f7ff;
+  --muted: #bdc9e5;
+  --line: #31548e;
+  --brand: #7fa2ff;
+  --brand-2: #ff6978;
+  --danger: #ff6978;
   --radius: 18px;
   --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.35);
   --container: min(1160px, 92vw);
@@ -27,9 +27,9 @@ body {
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 8% -10%, rgba(62, 209, 189, 0.25), transparent 35%),
-    radial-gradient(circle at 90% 8%, rgba(255, 181, 90, 0.22), transparent 28%),
-    linear-gradient(160deg, var(--bg) 0%, #081820 100%);
+    radial-gradient(circle at 8% -10%, rgba(55, 104, 210, 0.34), transparent 35%),
+    radial-gradient(circle at 90% 8%, rgba(196, 35, 55, 0.26), transparent 28%),
+    linear-gradient(160deg, var(--bg) 0%, #0b1935 100%);
   line-height: 1.6;
 }
 
@@ -922,6 +922,70 @@ select {
   height: 24px;
 }
 
+.cookie-banner {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1000;
+  color: var(--text);
+  background: #0a252d;
+  border: 1px solid rgba(169, 194, 199, 0.24);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+}
+
+.cookie-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.cookie-banner h2 {
+  margin-bottom: 5px;
+  font-size: 1.05rem;
+}
+
+.cookie-banner p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.cookie-banner a,
+.footer-bottom a {
+  color: #bffaf0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.cookie-choice {
+  min-height: 44px;
+  padding: 10px 16px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid #bffaf0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cookie-choice:hover,
+.cookie-choice:focus-visible {
+  color: #061217;
+  background: #bffaf0;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1056,6 +1120,16 @@ select {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cookie-banner__content,
+  .cookie-banner__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cookie-banner__content {
+    gap: 16px;
   }
 
   .brand-logo {
