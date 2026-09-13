@@ -922,6 +922,70 @@ select {
   height: 24px;
 }
 
+.cookie-banner {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1000;
+  color: var(--text);
+  background: #0a252d;
+  border: 1px solid rgba(169, 194, 199, 0.24);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+}
+
+.cookie-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.cookie-banner h2 {
+  margin-bottom: 5px;
+  font-size: 1.05rem;
+}
+
+.cookie-banner p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.cookie-banner a,
+.footer-bottom a {
+  color: #bffaf0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.cookie-choice {
+  min-height: 44px;
+  padding: 10px 16px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid #bffaf0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cookie-choice:hover,
+.cookie-choice:focus-visible {
+  color: #061217;
+  background: #bffaf0;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1056,6 +1120,16 @@ select {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cookie-banner__content,
+  .cookie-banner__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cookie-banner__content {
+    gap: 16px;
   }
 
   .brand-logo {

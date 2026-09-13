@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Server Status | Web Technics</title>
-  <meta name="description" content="Internal infrastructure dashboard for Web Technics showing uptime, load, performance metrics, technology stack, and security posture.">
-  <meta name="robots" content="noindex, follow">
+  <title>Web Technics Live Infrastructure and Server Status Page</title>
+  <meta name="description" content="Explore Web Technics infrastructure covering uptime, response time, software, monitoring, caching, backup practices, recovery planning, and security controls.">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://web-technics.services/server-status.php">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/branding/web-technics-icon-favicon.svg">
+  <script src="consent.js" defer></script>
+  <script src="analytics.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Web Technics home">
-        <img class="brand-logo" src="assets/branding/web-technics-logo-horizontal.svg" alt="Web Technics logo">
+        <img class="brand-logo" src="assets/branding/web-technics-logo-horizontal.svg" alt="Web Technics logo" width="980" height="260" loading="eager" decoding="async" fetchpriority="high">
       </a>
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">Menu</button>
       <nav class="nav-links" aria-label="Primary">
@@ -35,7 +39,7 @@
       <div class="container reveal">
         <span class="eyebrow">Infrastructure Dashboard</span>
         <h1 style="margin-top:16px;">Server Status</h1>
-        <p>Real-time infrastructure metrics showcasing our robust VPS performance, reliability, and security posture.</p>
+        <p>A reference snapshot of the hosting stack, performance targets, reliability practices, and security controls used by Web Technics.</p>
       </div>
     </section>
 
@@ -44,14 +48,14 @@
         <div class="status-hero">
           <article class="card reveal status-panel">
             <div class="status-banner">
-              <p class="kicker">Overall Status</p>
-              <h2 style="font-size:clamp(1.8rem, 3vw, 2.4rem); margin-top:10px;">All Systems Operational</h2>
-              <p style="margin-top:12px; color: var(--muted);">No active incidents are currently reported. Monitoring is continuous and alerts are handled as priority.</p>
+              <p class="kicker">Infrastructure Reference</p>
+              <h2 style="font-size:clamp(1.8rem, 3vw, 2.4rem); margin-top:10px;">Hosting Stack Overview</h2>
+              <p style="margin-top:12px; color: var(--muted);">This static snapshot documents the hosting stack and operational targets. Contact Web Technics for current service availability or incident information.</p>
               <div class="status-badges">
                 <span class="status-badge"><span class="status-dot"></span>Operational</span>
                 <span class="status-badge">24/7 Monitoring</span>
                 <span class="status-badge">Automatic Alerts</span>
-                <span class="status-badge">Last updated: <span id="status-time">just now</span></span>
+                <span class="status-badge">Viewed: <span id="status-time">just now</span></span>
               </div>
             </div>
             <div class="status-note">
@@ -101,7 +105,7 @@
           <article class="status-card">
             <p class="kicker">PHP Version</p>
             <p class="status-value">8.3.12</p>
-            <p class="status-subtext">Latest stable release</p>
+            <p class="status-subtext">Configured runtime version</p>
           </article>
           <article class="status-card">
             <p class="kicker">HTTP Protocol</p>
@@ -142,7 +146,7 @@
           <article class="security-card"><div class="security-icon">🛡️</div><h3>CDN Integration</h3><p>Cloudflare CDN for global content delivery and DDoS protection.</p></article>
           <article class="security-card"><div class="security-icon">💾</div><h3>Automated Backups</h3><p>Daily backups with 30-day retention and point-in-time recovery.</p></article>
           <article class="security-card"><div class="security-icon">⚡</div><h3>Server-Side Caching</h3><p>Redis and OPcache for optimized application performance.</p></article>
-          <article class="security-card"><div class="security-icon">📡</div><h3>24/7 Monitoring</h3><p>Real-time server monitoring with instant alerts and notifications.</p></article>
+          <article class="security-card"><div class="security-icon">📡</div><h3>24/7 Monitoring</h3><p>Continuous monitoring supports timely alerts, investigation, and incident response.</p></article>
           <article class="security-card"><div class="security-icon">⚖️</div><h3>Load Balancing</h3><p>Distributed architecture ready to handle traffic spikes.</p></article>
         </div>
       </div>
@@ -173,12 +177,13 @@
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
-        <h3>Usefull Links</h3>
+        <h3>Useful Links</h3>
         <a href="server-status.html">Server Status</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
       <div class="footer-col">
         <h3>Network Links</h3>
-        <a href="#">Coming soon</a>
+        <a href="https://web-technics.services/">Canonical website</a>
       </div>
       <div class="footer-col">
         <h3>Connect</h3>
@@ -190,7 +195,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p class="footer-signature"><img class="footer-logo" src="assets/branding/web-technics-icon-favicon.svg" alt="Web Technics icon">@<span data-year></span> Web-technics services.</p>
+      <p class="footer-signature"><img class="footer-logo" src="assets/branding/web-technics-icon-favicon.svg" alt="Web Technics icon" width="64" height="64" loading="lazy" decoding="async">@<span data-year></span> Web Technics.</p>
       <p>Server Status</p>
     </div>
   </footer>
@@ -201,6 +206,6 @@
       statusTime.textContent = new Date().toLocaleString();
     }
   </script>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
