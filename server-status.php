@@ -6,7 +6,8 @@
   <title>Web Technics Live Infrastructure and Server Status Page</title>
   <meta name="description" content="Explore Web Technics infrastructure covering uptime, response time, software, monitoring, caching, backup practices, recovery planning, and security controls.">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://web-technics.services/server-status.php">
+  <link rel="canonical" href="https://web-technics.com/server-status.php">
+  <meta property="og:url" content="https://web-technics.com/server-status.php">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
@@ -183,7 +184,7 @@
       </div>
       <div class="footer-col">
         <h3>Network Links</h3>
-        <a href="https://web-technics.services/">Canonical website</a>
+        <a href="https://web-technics.services/">International company site</a>
       </div>
       <div class="footer-col">
         <h3>Connect</h3>

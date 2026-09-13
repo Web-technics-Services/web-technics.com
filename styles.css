@@ -1,14 +1,14 @@
 :root {
-  --bg: #061217;
-  --bg-soft: #0b1f27;
-  --card: #0f2731;
-  --card-2: #133542;
-  --text: #e9f4f5;
-  --muted: #a9c2c7;
-  --line: #1e4657;
-  --brand: #3ed1bd;
-  --brand-2: #ffb55a;
-  --danger: #f06f62;
+  --bg: #071329;
+  --bg-soft: #0c1c3a;
+  --card: #10264b;
+  --card-2: #173463;
+  --text: #f4f7ff;
+  --muted: #bdc9e5;
+  --line: #31548e;
+  --brand: #7fa2ff;
+  --brand-2: #ff6978;
+  --danger: #ff6978;
   --radius: 18px;
   --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.35);
   --container: min(1160px, 92vw);
@@ -27,9 +27,9 @@ body {
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 8% -10%, rgba(62, 209, 189, 0.25), transparent 35%),
-    radial-gradient(circle at 90% 8%, rgba(255, 181, 90, 0.22), transparent 28%),
-    linear-gradient(160deg, var(--bg) 0%, #081820 100%);
+    radial-gradient(circle at 8% -10%, rgba(55, 104, 210, 0.34), transparent 35%),
+    radial-gradient(circle at 90% 8%, rgba(196, 35, 55, 0.26), transparent 28%),
+    linear-gradient(160deg, var(--bg) 0%, #0b1935 100%);
   line-height: 1.6;
 }
 
