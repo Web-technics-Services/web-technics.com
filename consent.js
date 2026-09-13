@@ -1,5 +1,6 @@
 (() => {
-  const measurementId = "G-MMMGPHD62R";
+  const measurementId = "G-G65WTVT0JR";
+  window.webTechnicsMeasurementId = measurementId;
   const storageKey = "webTechnicsAnalyticsConsent";
   const consentVersion = 1;
   const consentLifetime = 180 * 24 * 60 * 60 * 1000;
