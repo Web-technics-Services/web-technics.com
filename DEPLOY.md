@@ -25,7 +25,13 @@ services.html
 sitemap.xml
 styles.css
 web-design-cambodia.html
+assets/media/          (whole directory, 19 files, ~1.9 MB)
 ```
+
+`assets/media/` is new and does not yet exist on the VPS. Every image on the
+site is now self-hosted from that directory, so if it is not uploaded the pages
+will render with broken images. Upload the directory as a whole rather than
+picking individual files.
 
 Do not deploy `REDIRECTS.md` or `nginx/web-technics.com.conf`; both were
 removed. Do not install a blanket domain redirect. Every public `.com` route
